@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+/* Design tokens: "Graphite + Lime". Use these through Tailwind classes (bg-surface, text-accent, font-mono, …). */
+@theme {
+  --color-ground: #0e1012;
+  --color-surface: #171a1d;
+  --color-raised: #1f2327;
+  --color-line: #2a2f34;
+  --color-line-soft: #23272b;
+  --color-ink: #f2f4f5;
+  --color-ink-soft: #c9ced3;
+  --color-muted: #9aa1a8;
+  --color-accent: #d4ff3a;
+  --color-accent-ink: #0e1012;
+  --color-engine: #ff8a3d;
+  --color-run: #8fb3ff;
+  --color-danger: #ff6b6b;
+
+  --font-sans: 'Outfit', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    @apply bg-ground text-ink min-h-full font-sans antialiased;
+  }
+
+  input::placeholder {
+    @apply text-muted;
+  }
+
+  /* Hide number spinners: values are typed, not clicked. */
+  input[type='number'] {
+    appearance: textfield;
+  }
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+}

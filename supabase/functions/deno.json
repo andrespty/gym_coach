@@ -1,0 +1,10 @@
+{
+  "imports": {
+    "@gym-coach/core": "../../packages/core/src/index.ts",
+    "@anthropic-ai/sdk": "npm:@anthropic-ai/sdk@1.4.0",
+    "@anthropic-ai/sdk/helpers/zod": "npm:@anthropic-ai/sdk@1.4.0/helpers/zod",
+    "@supabase/supabase-js": "npm:@supabase/supabase-js@2.49.0",
+    "zod": "npm:zod@4.1.12",
+    "zod/v4": "npm:zod@4.1.12/v4"
+  }
+}

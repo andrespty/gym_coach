@@ -1,0 +1,23 @@
+{
+  "name": "@gym-coach/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Pure training logic and shared schemas. No React, no Supabase.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "seed:exercises": "node scripts/generateExerciseSeed.ts"
+  },
+  "dependencies": {
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "vitest": "^3.1.0",
+    "@types/node": "^22.15.0"
+  }
+}
