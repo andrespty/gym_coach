@@ -13,7 +13,11 @@
     "test": "pnpm -r test",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "supabase": "supabase",
+    "db:start": "supabase start",
+    "db:stop": "supabase stop",
+    "functions:serve": "supabase functions serve --env-file supabase/functions/.env"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
@@ -22,13 +26,15 @@
     "globals": "^16.0.0",
     "prettier": "^3.5.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "supabase": "2.122.1",
     "typescript": "^5.8.0",
     "typescript-eslint": "^8.30.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "@tailwindcss/oxide",
       "esbuild",
-      "@tailwindcss/oxide"
+      "supabase"
     ]
   }
 }
